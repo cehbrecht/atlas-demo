@@ -1,0 +1,20 @@
+
+
+--------------------------------------------------------------------------------
+                         IOOS Compliance Checker Report                         
+                                 Version 5.4.2                                  
+                     Report generated 2025-10-08T23:39:28Z                      
+                                    cf:1.11                                     
+http://cfconventions.org/Data/cf-conventions/cf-conventions-1.11/cf-conventions.html
+--------------------------------------------------------------------------------
+                               Corrective Actions                               
+clivi_Amon_EC-Earth3-Veg_piControl_r1i1p1f1_gr_196601-196612.nc has 2 potential issues
+
+
+                                    Warnings                                    
+--------------------------------------------------------------------------------
+§2.6 Attributes
+* §2.6.1 Conventions global attribute does not contain "CF-1.11"
+
+§4.4 Time Coordinate
+* Variable time has a calendar attribute of proleptic_gregorian and it is recommended that the units_metadata attribute is present and has one of the values ['leap_seconds: none', 'leap_seconds: utc', 'leap_seconds: unknown']
