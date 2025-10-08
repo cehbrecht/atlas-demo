@@ -1,0 +1,37 @@
+{
+  "title": "clivi_Amon_EC-Earth3-Veg_piControl_r1i1p1f1_gr_196601-196612",
+  "variables": [
+    "time_bnds",
+    "lat_bnds",
+    "lon_bnds",
+    "clivi"
+  ],
+  "dimensions": {
+    "time": 12,
+    "bnds": 2,
+    "lat": 256,
+    "lon": 512
+  },
+  "bbox": [
+    0.0,
+    -89.4628215685774,
+    359.296875,
+    89.4628215685774
+  ],
+  "time_range": [
+    "1966-01-16T12:00:00.000000000",
+    "1966-12-16T12:00:00.000000000"
+  ],
+  "attributes": {
+    "Conventions": "CF-1.7 CMIP-6.2",
+    "activity_id": "CMIP",
+    "branch_method": "standard",
+    "branch_time_in_child": 0.0,
+    "branch_time_in_parent": 65744.0,
+    "contact": "cmip6-data@ec-earth.org",
+    "creation_date": "2019-06-19T19:48:57Z",
+    "data_specs_version": "01.00.30",
+    "experiment": "pre-industrial control",
+    "experiment_id": "piControl",
+    "external_variables": "areacella",
+    "forcing_index": 
