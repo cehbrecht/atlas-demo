@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 import xarray as xr
 import warnings
+import numpy as np
 
 # Suppress xarray fill-value warnings
 warnings.filterwarnings("ignore", category=xr.SerializationWarning)
@@ -27,6 +28,21 @@ existing_files = [f for f in nc_files if f.exists()]
 if not existing_files:
     print("No NetCDF files found locally. Skipping metadata generation.")
     exit(0)
+
+def convert_recursive(obj):
+    """Recursively convert NumPy types to native Python types for JSON serialization."""
+    if isinstance(obj, dict):
+        return {k: convert_recursive(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [convert_recursive(v) for v in obj]
+    elif isinstance(obj, np.integer):
+        return int(obj)
+    elif isinstance(obj, np.floating):
+        return float(obj)
+    elif isinstance(obj, np.ndarray):
+        return obj.tolist()
+    else:
+        return obj
 
 for nc_file in existing_files:
     print(f"Generating metadata sidecar for {nc_file.name}...")
@@ -77,10 +93,13 @@ for nc_file in existing_files:
 
     ds.close()
 
+    # Convert all NumPy types before writing JSON
+    metadata_clean = convert_recursive(metadata)
+
     # Write sidecar JSON, preserving subfolders
     out_file = META_DIR / relative_path.parent / f"{nc_file.stem}.stac.json"
     out_file.parent.mkdir(parents=True, exist_ok=True)
     with open(out_file, "w") as f:
-        json.dump(metadata, f, indent=2)
+        json.dump(metadata_clean, f, indent=2)
 
     print(f"Saved sidecar: {out_file}")
