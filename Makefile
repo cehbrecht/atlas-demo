@@ -25,9 +25,14 @@ help:
 	@echo "  make save       - Save all changes to DataLad"
 	@echo "  make clean      - Remove generated metadata, CF reports, catalogs"
 
-# Initialize real data from URLs (fast)
+# Initialize real data from URLs (download)
 addurls:
-	@echo "Adding URLs to DataLad dataset..."
+	@echo "Adding URLs to DataLad dataset (download)..."
+	datalad addurls -d . --key sha256 atlas/atlas_urls.csv '{url}' '{path}'
+
+# Initialize real data from URLs (fast)
+addurls_fast:
+	@echo "Adding URLs to DataLad dataset (fast)..."
 	datalad addurls -d . --key sha256 --fast atlas/atlas_urls.csv '{url}' '{path}'
 
 # Extract metadata
