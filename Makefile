@@ -28,7 +28,7 @@ help:
 # Initialize real data from URLs (fast)
 addurls:
 	@echo "Adding URLs to DataLad dataset..."
-	datalad addurls -d . --key md5 --fast atlas/atlas_urls.csv '{url}' '{path}'
+	datalad addurls -d . --key sha256 --fast atlas/atlas_urls.csv '{url}' '{path}'
 
 # Extract metadata
 metadata:
