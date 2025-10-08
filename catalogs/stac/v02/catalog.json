@@ -1,0 +1,75 @@
+{
+  "type": "Catalog",
+  "id": "v02",
+  "stac_version": "1.1.0",
+  "description": "Subcatalog for v02",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Atlas Demo"
+    },
+    {
+      "rel": "child",
+      "href": "./BERKELEY/catalog.json",
+      "type": "application/json",
+      "title": "BERKELEY"
+    },
+    {
+      "rel": "child",
+      "href": "./ERA5/catalog.json",
+      "type": "application/json",
+      "title": "ERA5"
+    },
+    {
+      "rel": "child",
+      "href": "./CERRA/catalog.json",
+      "type": "application/json",
+      "title": "CERRA"
+    },
+    {
+      "rel": "child",
+      "href": "./E-OBS/catalog.json",
+      "type": "application/json",
+      "title": "E-OBS"
+    },
+    {
+      "rel": "child",
+      "href": "./ERA5-Land/catalog.json",
+      "type": "application/json",
+      "title": "ERA5-Land"
+    },
+    {
+      "rel": "child",
+      "href": "./CMIP6/catalog.json",
+      "type": "application/json",
+      "title": "CMIP6"
+    },
+    {
+      "rel": "child",
+      "href": "./CMIP5/catalog.json",
+      "type": "application/json",
+      "title": "CMIP5"
+    },
+    {
+      "rel": "child",
+      "href": "./CORDEX-CORE/catalog.json",
+      "type": "application/json",
+      "title": "CORDEX-CORE"
+    },
+    {
+      "rel": "child",
+      "href": "./CORDEX-EUR-11/catalog.json",
+      "type": "application/json",
+      "title": "CORDEX-EUR-11"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Atlas Demo"
+    }
+  ],
+  "title": "v02"
+}

@@ -1,0 +1,53 @@
+name: Update Catalog
+
+on:
+  pull_request:
+    paths:
+      - 'atlas/metadata/**'
+  push:
+    branches:
+      - main
+    paths:
+      - 'atlas/metadata/**'
+
+jobs:
+  build-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Conda environment
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          environment-file: environment.yml
+          auto-activate-base: true
+          activate-environment: atlas-demo
+
+      - name: Check if metadata changed
+        id: changes
+        run: |
+          git fetch origin main --depth=1
+          CHANGED=$(git diff --name-only origin/main HEAD atlas/metadata/ || true)
+          echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Exit if no metadata changed
+        if: steps.changes.outputs.changed_files == ''
+        run: |
+          echo "No metadata changes detected, skipping catalog update."
+          exit 0
+
+      - name: Generate STAC catalog from metadata
+        shell: bash -l {0}
+        run: |
+          # Conda environment is already activated
+          python scripts/generate_catalog.py
+
+      - name: Commit updated catalog
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions"
+          git add catalogs/stac/
+          git diff --quiet || git commit -m "Update STAC catalog via GitHub Actions"
+          git push || echo "No changes to push"

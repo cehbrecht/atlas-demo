@@ -1,0 +1,20 @@
+name: atlas-demo
+channels:
+  - conda-forge
+dependencies:
+  # Core
+  - python>=3.12
+  - pip                        # only if you need additional pip packages
+  - numpy                      # required by xarray
+  - xarray                     # read NetCDF
+  - netCDF4                    # backend for NetCDF
+  - pystac>=1.14,<2            # STAC catalog generation
+  - compliance-checker         # CF/IOOS checks
+  - datalad>=1.2.1             # for 'datalad run', dataset management
+  # Linting
+  - ruff
+
+
+# Optional: only if you plan to virtualize Zarr/remote datasets
+# - fsspec
+# - zarr

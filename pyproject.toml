@@ -1,0 +1,21 @@
+[tool.ruff]
+# List of rules or error codes to ignore
+lint.ignore = [
+    "E501",  # line too long
+    "E701",  # Multiple statements on one line (colon)
+    "E722",  # Do not use bare `except`
+    "F401",  # imported but unused
+]
+
+# Optional: exclude generated data or metadata directories
+exclude = [
+    "atlas/data",
+    "atlas/metadata",
+    "catalogs",
+]
+
+# Optional: target Python version
+target-version = "py312"
+
+# Optional: extend or select a specific ruleset
+lint.select = ["E", "F", "W", "C90"]

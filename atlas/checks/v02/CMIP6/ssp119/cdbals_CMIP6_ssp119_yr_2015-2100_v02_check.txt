@@ -1,0 +1,28 @@
+
+
+--------------------------------------------------------------------------------
+                         IOOS Compliance Checker Report                         
+                                 Version 5.4.2                                  
+                     Report generated 2025-10-07T22:16:38Z                      
+                                    cf:1.11                                     
+http://cfconventions.org/Data/cf-conventions/cf-conventions-1.11/cf-conventions.html
+--------------------------------------------------------------------------------
+                               Corrective Actions                               
+cdbals_CMIP6_ssp119_yr_2015-2100_v02.nc has 4 potential issues
+
+
+                                    Warnings                                    
+--------------------------------------------------------------------------------
+§2.5 Variables
+* For the variable cdbals the missing_value must be equal to the _FillValue
+
+§2.6 Attributes
+* §2.6.2 global attribute history should exist and be a non-empty string
+* §2.6.1 Conventions global attribute does not contain "CF-1.11"
+
+§3.1.2 Temperature units
+* Variable cdbals has a temperature related standard_name and it is recommended that the units_metadata attribute is present and has one of the values ['temperature: difference', 'temperature: on_scale', 'temperature: unknown']
+* Variable threshold22c has a temperature related standard_name and it is recommended that the units_metadata attribute is present and has one of the values ['temperature: difference', 'temperature: on_scale', 'temperature: unknown']
+
+§4.4 Time Coordinate
+* Variable time has a calendar attribute of standard and it is recommended that the units_metadata attribute is present and has one of the values ['leap_seconds: none', 'leap_seconds: utc', 'leap_seconds: unknown']

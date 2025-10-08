@@ -1,0 +1,57 @@
+{
+  "type": "Catalog",
+  "id": "CMIP6",
+  "stac_version": "1.1.0",
+  "description": "Subcatalog for v02/CMIP6",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Atlas Demo"
+    },
+    {
+      "rel": "child",
+      "href": "./historical/catalog.json",
+      "type": "application/json",
+      "title": "historical"
+    },
+    {
+      "rel": "child",
+      "href": "./ssp119/catalog.json",
+      "type": "application/json",
+      "title": "ssp119"
+    },
+    {
+      "rel": "child",
+      "href": "./ssp126/catalog.json",
+      "type": "application/json",
+      "title": "ssp126"
+    },
+    {
+      "rel": "child",
+      "href": "./ssp245/catalog.json",
+      "type": "application/json",
+      "title": "ssp245"
+    },
+    {
+      "rel": "child",
+      "href": "./ssp370/catalog.json",
+      "type": "application/json",
+      "title": "ssp370"
+    },
+    {
+      "rel": "child",
+      "href": "./ssp585/catalog.json",
+      "type": "application/json",
+      "title": "ssp585"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "v02"
+    }
+  ],
+  "title": "CMIP6"
+}

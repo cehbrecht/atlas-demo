@@ -1,0 +1,58 @@
+{
+  "title": "cdbals_CMIP5_rcp85_yr_2006-2100_v02",
+  "variables": [
+    "lat_bnds",
+    "lon_bnds",
+    "time_bnds",
+    "cdbals",
+    "crs"
+  ],
+  "dimensions": {
+    "lat": 90,
+    "bnds": 2,
+    "lon": 180,
+    "time": 95,
+    "member": 17
+  },
+  "bbox": [
+    -179.0,
+    -89.0,
+    179.0,
+    89.0
+  ],
+  "time_range": [
+    "2006-01-01T00:00:00.000000000",
+    "2100-01-01T00:00:00.000000000"
+  ],
+  "attributes": {
+    "Conventions": "CF-1.9 ACDD-1.3",
+    "title": "Copernicus Interactive Climate Atlas: gridded monthly dataset",
+    "summary": "Monthly/annual gridded data from observations, reanalyses and climate change projections for the variables and indices included in the Copernicus Interactive Climate Atlas",
+    "institution": "Copernicus Climate Change Service (C3S)",
+    "producers": "Institute of Physics of Cantabria (IFCA, CSIC-UC) and Predictia",
+    "license": "CC-BY 4.0, https://creativecommons.org/licenses/by/4.0/",
+    "project": "Copernicus Interactive Climate Atlas",
+    "product": "copernicus-interactive-climate-atlas-dataset",
+    "product_version": "v2.0",
+    "standard_name_vocabulary": "CF Standard Name Table (Version 79, 2022-03-19)",
+    "source": "CMIP5",
+    "experiment_id": "rcp85",
+    "frequency": "yr",
+    "variable_id": "cdbals",
+    "time_min": "2006",
+    "time_max": "2100",
+    "geospatial_lat_min": "-90.0",
+    "geospatial_lat_max": "90.0",
+    "geospatial_lat_resolution": "2.0",
+    "geospatial_lat_units": "degrees_north",
+    "geospatial_lon_min": "-180.0",
+    "geospatial_lon_max": "180.0",
+    "geospatial_lon_resolution": "2.0",
+    "geospatial_lon_units": "degrees_east",
+    "date_created": "2025-02-08 19:47:35.722560+01:00",
+    "tracking_id": "2d3ece1a-55e8-466c-ba98-f4e3d97be517"
+  },
+  "assets": {
+    "datalad": "atlas/data/v02/CMIP5/rcp85/cdbals_CMIP5_rcp85_yr_2006-2100_v02.nc"
+  }
+}

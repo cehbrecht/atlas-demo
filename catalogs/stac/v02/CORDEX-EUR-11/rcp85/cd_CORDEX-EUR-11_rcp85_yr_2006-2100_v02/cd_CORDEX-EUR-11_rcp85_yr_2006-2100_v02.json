@@ -1,0 +1,130 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [],
+  "id": "cd_CORDEX-EUR-11_rcp85_yr_2006-2100_v02",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -44.8125,
+          21.8125
+        ],
+        [
+          -44.8125,
+          72.6875
+        ],
+        [
+          65.1875,
+          72.6875
+        ],
+        [
+          65.1875,
+          21.8125
+        ],
+        [
+          -44.8125,
+          21.8125
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -44.8125,
+    21.8125,
+    65.1875,
+    72.6875
+  ],
+  "properties": {
+    "Conventions": "CF-1.9 ACDD-1.3",
+    "title": "cd_CORDEX-EUR-11_rcp85_yr_2006-2100_v02",
+    "summary": "Monthly/annual gridded data from observations, reanalyses and climate change projections for the variables and indices included in the Copernicus Interactive Climate Atlas",
+    "institution": "Copernicus Climate Change Service (C3S)",
+    "producers": "Institute of Physics of Cantabria (IFCA, CSIC-UC) and Predictia",
+    "license": "CC-BY 4.0, https://creativecommons.org/licenses/by/4.0/",
+    "project": "Copernicus Interactive Climate Atlas",
+    "product": "copernicus-interactive-climate-atlas-dataset",
+    "product_version": "v2.0",
+    "standard_name_vocabulary": "CF Standard Name Table (Version 79, 2022-03-19)",
+    "source": "CORDEX-EUR-11",
+    "experiment_id": "rcp85",
+    "frequency": "yr",
+    "variable_id": "cd",
+    "time_min": "2006",
+    "time_max": "2100",
+    "geospatial_lat_min": "21.75",
+    "geospatial_lat_max": "72.75",
+    "geospatial_lat_resolution": "0.125",
+    "geospatial_lat_units": "degrees_north",
+    "geospatial_lon_min": "-44.875",
+    "geospatial_lon_max": "65.25",
+    "geospatial_lon_resolution": "0.125",
+    "geospatial_lon_units": "degrees_east",
+    "date_created": "2025-02-04 12:43:43.386919+01:00",
+    "tracking_id": "133a1a1a-c1dd-41f4-b24c-3a76e7f41357",
+    "variables": [
+      "lat_bnds",
+      "lon_bnds",
+      "time_bnds",
+      "cd",
+      "crs"
+    ],
+    "dimensions": {
+      "lat": 408,
+      "bnds": 2,
+      "lon": 881,
+      "time": 95,
+      "member": 68
+    },
+    "datetime": "2006-01-01T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../../catalog.json",
+      "type": "application/json",
+      "title": "Atlas Demo"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "rcp85"
+    }
+  ],
+  "assets": {
+    "datalad": {
+      "href": "../atlas/data/v02/CORDEX-EUR-11/rcp85/cd_CORDEX-EUR-11_rcp85_yr_2006-2100_v02.nc",
+      "type": "application/netcdf",
+      "title": "DataLad reference",
+      "roles": [
+        "data"
+      ]
+    },
+    "download": {
+      "href": "https://data.mips.climate.copernicus.eu/thredds/fileServer/esg_c3s-cica-atlas/v02/CORDEX-EUR-11/rcp85/cd_CORDEX-EUR-11_rcp85_yr_2006-2100_v02.nc",
+      "type": "application/netcdf",
+      "title": "HTTP download",
+      "roles": [
+        "data"
+      ]
+    },
+    "s3": {
+      "href": "s3://datalad-demo/v02/CORDEX-EUR-11/rcp85/cd_CORDEX-EUR-11_rcp85_yr_2006-2100_v02.nc",
+      "type": "application/netcdf",
+      "title": "S3 download",
+      "roles": [
+        "data"
+      ]
+    },
+    "check": {
+      "href": "https://raw.githubusercontent.com/cehbrecht/atlas-demo/refs/heads/main/atlas/checks/v02/CORDEX-EUR-11/rcp85/cd_CORDEX-EUR-11_rcp85_yr_2006-2100_v02_check.txt",
+      "type": "text/plain",
+      "title": "CF/IOOS compliance check",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

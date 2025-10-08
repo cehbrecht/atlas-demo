@@ -1,0 +1,128 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [],
+  "id": "cd_CERRA_yr_1985-2021_v02",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -58.15625,
+          20.28125
+        ],
+        [
+          -58.15625,
+          75.34375
+        ],
+        [
+          74.15625,
+          75.34375
+        ],
+        [
+          74.15625,
+          20.28125
+        ],
+        [
+          -58.15625,
+          20.28125
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -58.15625,
+    20.28125,
+    74.15625,
+    75.34375
+  ],
+  "properties": {
+    "Conventions": "CF-1.9 ACDD-1.3",
+    "title": "cd_CERRA_yr_1985-2021_v02",
+    "summary": "Monthly/annual gridded data from observations, reanalyses and climate change projections for the variables and indices included in the Copernicus Interactive Climate Atlas",
+    "institution": "Copernicus Climate Change Service (C3S)",
+    "producers": "Institute of Physics of Cantabria (IFCA, CSIC-UC) and Predictia",
+    "license": "CC-BY 4.0, https://creativecommons.org/licenses/by/4.0/",
+    "project": "Copernicus Interactive Climate Atlas",
+    "product": "copernicus-interactive-climate-atlas-dataset",
+    "product_version": "v2.0",
+    "standard_name_vocabulary": "CF Standard Name Table (Version 79, 2022-03-19)",
+    "source": "CERRA",
+    "frequency": "yr",
+    "variable_id": "cd",
+    "time_min": "1985",
+    "time_max": "2021",
+    "geospatial_lat_min": "20.25",
+    "geospatial_lat_max": "75.375",
+    "geospatial_lat_resolution": "0.0625",
+    "geospatial_lat_units": "degrees_north",
+    "geospatial_lon_min": "-58.1875",
+    "geospatial_lon_max": "74.1875",
+    "geospatial_lon_resolution": "0.0625",
+    "geospatial_lon_units": "degrees_east",
+    "date_created": "2024-12-13 13:10:56.338732+01:00",
+    "tracking_id": "592ba43b-8d3f-4870-bc7a-afb43bb59be7",
+    "variables": [
+      "lat_bnds",
+      "lon_bnds",
+      "time_bnds",
+      "cd",
+      "crs"
+    ],
+    "dimensions": {
+      "lat": 882,
+      "bnds": 2,
+      "lon": 2118,
+      "time": 37
+    },
+    "datetime": "1985-01-01T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Atlas Demo"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "CERRA"
+    }
+  ],
+  "assets": {
+    "datalad": {
+      "href": "../atlas/data/v02/CERRA/cd_CERRA_yr_1985-2021_v02.nc",
+      "type": "application/netcdf",
+      "title": "DataLad reference",
+      "roles": [
+        "data"
+      ]
+    },
+    "download": {
+      "href": "https://data.mips.climate.copernicus.eu/thredds/fileServer/esg_c3s-cica-atlas/v02/CERRA/cd_CERRA_yr_1985-2021_v02.nc",
+      "type": "application/netcdf",
+      "title": "HTTP download",
+      "roles": [
+        "data"
+      ]
+    },
+    "s3": {
+      "href": "s3://datalad-demo/v02/CERRA/cd_CERRA_yr_1985-2021_v02.nc",
+      "type": "application/netcdf",
+      "title": "S3 download",
+      "roles": [
+        "data"
+      ]
+    },
+    "check": {
+      "href": "https://raw.githubusercontent.com/cehbrecht/atlas-demo/refs/heads/main/atlas/checks/v02/CERRA/cd_CERRA_yr_1985-2021_v02_check.txt",
+      "type": "text/plain",
+      "title": "CF/IOOS compliance check",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "Catalog",
+  "id": "rcp26",
+  "stac_version": "1.1.0",
+  "description": "Subcatalog for v02/CMIP5/rcp26",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "Atlas Demo"
+    },
+    {
+      "rel": "item",
+      "href": "./cd_CMIP5_rcp26_yr_2006-2100_v02/cd_CMIP5_rcp26_yr_2006-2100_v02.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./cdbaisimip_CMIP5_rcp26_yr_2006-2100_v02/cdbaisimip_CMIP5_rcp26_yr_2006-2100_v02.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./cdbals_CMIP5_rcp26_yr_2006-2100_v02/cdbals_CMIP5_rcp26_yr_2006-2100_v02.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "CMIP5"
+    }
+  ],
+  "title": "rcp26"
+}
