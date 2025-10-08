@@ -1,0 +1,1 @@
+14d599e3-c0a4-4dfc-aae3-d242e8adb5c4 autoenable=true bucket=datalad-demo chunk=0 datacenter=US encryption=none host=s3.eu-dkrz-1.dkrz.cloud name=s3dldemo port=80 protocol=https requeststyle=path storageclass=STANDARD type=S3 timestamp=1759956418s
