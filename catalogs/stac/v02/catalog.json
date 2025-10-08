@@ -18,12 +18,6 @@
     },
     {
       "rel": "child",
-      "href": "./ERA5/catalog.json",
-      "type": "application/json",
-      "title": "ERA5"
-    },
-    {
-      "rel": "child",
       "href": "./CERRA/catalog.json",
       "type": "application/json",
       "title": "CERRA"
@@ -42,15 +36,21 @@
     },
     {
       "rel": "child",
-      "href": "./CMIP6/catalog.json",
+      "href": "./ERA5/catalog.json",
       "type": "application/json",
-      "title": "CMIP6"
+      "title": "ERA5"
     },
     {
       "rel": "child",
       "href": "./CMIP5/catalog.json",
       "type": "application/json",
       "title": "CMIP5"
+    },
+    {
+      "rel": "child",
+      "href": "./CMIP6/catalog.json",
+      "type": "application/json",
+      "title": "CMIP6"
     },
     {
       "rel": "child",
