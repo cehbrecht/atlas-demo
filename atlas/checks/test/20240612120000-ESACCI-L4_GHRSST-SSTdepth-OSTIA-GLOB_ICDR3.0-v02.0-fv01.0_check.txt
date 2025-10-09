@@ -1,0 +1,55 @@
+
+
+--------------------------------------------------------------------------------
+                         IOOS Compliance Checker Report                         
+                                 Version 5.4.2                                  
+                     Report generated 2025-10-09T00:00:07Z                      
+                                    cf:1.11                                     
+http://cfconventions.org/Data/cf-conventions/cf-conventions-1.11/cf-conventions.html
+--------------------------------------------------------------------------------
+                               Corrective Actions                               
+20240612120000-ESACCI-L4_GHRSST-SSTdepth-OSTIA-GLOB_ICDR3.0-v02.0-fv01.0.nc has 4 potential issues
+
+
+                                    Warnings                                    
+--------------------------------------------------------------------------------
+§2.5 Variables
+* Attribute 'actual_range' (type: <class 'numpy.float32'>) and parent variable 'analysed_sst' (type: <class 'numpy.int16'>) must have equivalent datatypes
+* Attribute 'actual_range' (type: <class 'numpy.float32'>) and parent variable 'analysed_sst_uncertainty' (type: <class 'numpy.int16'>) must have equivalent datatypes
+* Attribute 'actual_range' (type: <class 'numpy.float32'>) and parent variable 'sea_ice_fraction' (type: <class 'numpy.int8'>) must have equivalent datatypes
+
+§2.6 Attributes
+* §2.6.2 time:comment should be a non-empty string
+* §2.6.1 Conventions global attribute does not contain "CF-1.11"
+
+§3.1.2 Temperature units
+* Variable analysed_sst has a temperature related standard_name and it is recommended that the units_metadata attribute is present and has one of the values ['temperature: difference', 'temperature: on_scale', 'temperature: unknown']
+
+§7.1 Cell Boundaries
+* Bounds variable time_bnds and parent variable time have the following non matching boundary related attributes: ['long_name']
+* Bounds variable time_bnds and parent variable time have the following non matching boundary related attributes: ['long_name']
+* Bounds variable time_bnds and parent variable time have the following matching attributes ['units'].  It is recommended that only the parent variable of the bounds variable contains these attributes
+* Bounds variable lat_bnds and parent variable lat have the following non matching boundary related attributes: ['long_name']
+* Bounds variable lat_bnds and parent variable lat have the following non matching boundary related attributes: ['long_name']
+* Bounds variable lat_bnds and parent variable lat have the following matching attributes ['units'].  It is recommended that only the parent variable of the bounds variable contains these attributes
+* Bounds variable lon_bnds and parent variable lon have the following non matching boundary related attributes: ['long_name']
+* Bounds variable lon_bnds and parent variable lon have the following non matching boundary related attributes: ['long_name']
+* Bounds variable lon_bnds and parent variable lon have the following matching attributes ['units'].  It is recommended that only the parent variable of the bounds variable contains these attributes
+* Bounds variable time_bnds and parent variable time have the following non matching boundary related attributes: ['long_name']
+* Bounds variable time_bnds and parent variable time have the following non matching boundary related attributes: ['long_name']
+* Bounds variable time_bnds and parent variable time have the following matching attributes ['units'].  It is recommended that only the parent variable of the bounds variable contains these attributes
+* Bounds variable lat_bnds and parent variable lat have the following non matching boundary related attributes: ['long_name']
+* Bounds variable lat_bnds and parent variable lat have the following non matching boundary related attributes: ['long_name']
+* Bounds variable lat_bnds and parent variable lat have the following matching attributes ['units'].  It is recommended that only the parent variable of the bounds variable contains these attributes
+* Bounds variable lon_bnds and parent variable lon have the following non matching boundary related attributes: ['long_name']
+* Bounds variable lon_bnds and parent variable lon have the following non matching boundary related attributes: ['long_name']
+* Bounds variable lon_bnds and parent variable lon have the following matching attributes ['units'].  It is recommended that only the parent variable of the bounds variable contains these attributes
+* Bounds variable time_bnds and parent variable time have the following non matching boundary related attributes: ['long_name']
+* Bounds variable time_bnds and parent variable time have the following non matching boundary related attributes: ['long_name']
+* Bounds variable time_bnds and parent variable time have the following matching attributes ['units'].  It is recommended that only the parent variable of the bounds variable contains these attributes
+* Bounds variable lat_bnds and parent variable lat have the following non matching boundary related attributes: ['long_name']
+* Bounds variable lat_bnds and parent variable lat have the following non matching boundary related attributes: ['long_name']
+* Bounds variable lat_bnds and parent variable lat have the following matching attributes ['units'].  It is recommended that only the parent variable of the bounds variable contains these attributes
+* Bounds variable lon_bnds and parent variable lon have the following non matching boundary related attributes: ['long_name']
+* Bounds variable lon_bnds and parent variable lon have the following non matching boundary related attributes: ['long_name']
+* Bounds variable lon_bnds and parent variable lon have the following matching attributes ['units'].  It is recommended that only the parent variable of the bounds variable contains these attributes
