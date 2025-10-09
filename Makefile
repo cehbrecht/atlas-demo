@@ -98,7 +98,8 @@ push:
 	git -C "$$ds" push --all; \
 	git -C "$$ds" push --tags; \
 	echo "==== git annex sync (including remotes) ===="; \
-	git -C "$$ds" annex sync --content --all
+	# git -C "$$ds" annex sync --content --all
+	git -C "$$ds" annex sync --all
 
 # Clean generated files (metadata, CF reports, catalogs)
 clean:
