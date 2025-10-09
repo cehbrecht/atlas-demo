@@ -7,7 +7,7 @@ META_DIR := atlas/metadata
 CHECKS_DIR := atlas/checks
 CATALOGS_DIR := catalogs/stac
 
-.PHONY: all help addurls metadata checks catalog status save clean lint
+.PHONY: all help addurls metadata checks catalog status diff save info push clean lint
 
 # Default target shows help
 all: help
@@ -22,7 +22,11 @@ help:
 	@echo "  make catalog    - Generate static STAC catalog from metadata"
 	@echo "  make update     - run checks, metadata, and catalog (recommended workflow)"
 	@echo "  make status     - Show DataLad status"
+	@echo "  make diff       - Show DataLad diff"
+	@echo "  make info       - Show DataLad info"
 	@echo "  make save       - Save all changes to DataLad"
+	@echo "  make push       - Push to all remotes"
+	@echo "  make pull       - Pull from origin"
 	@echo "  make clean      - Remove generated metadata, CF reports, catalogs"
 
 # Initialize real data from URLs (download)
@@ -68,10 +72,47 @@ status:
 	@echo "DataLad status:"
 	datalad status
 
+# Show DataLad diff
+diff:
+	@ds="$(shell git -C . rev-parse --show-toplevel)"; \
+	echo "Dataset: $$ds"; \
+	echo "==== datalad diff ===="; \
+	datalad diff --dataset "$$ds"
+
 # Save all changes to DataLad
 save:
 	@echo "Saving all changes to DataLad..."
 	datalad save -m "Save all generated files"
+
+# info target for DataLad datasets
+info:
+	@ds="$(shell git -C . rev-parse --show-toplevel)"; \
+	echo "Dataset: $$ds"; \
+	echo "==== git annex info ===="; \
+	git -C "$$ds" annex info;
+
+# push to all remotes
+push:
+	@ds="$(shell git -C . rev-parse --show-toplevel)"; \
+	echo "Dataset: $$ds"; \
+	echo "==== git push ===="; \
+	git -C "$$ds" push --all; \
+	git -C "$$ds" push --tags; \
+	echo "==== git annex sync (including remotes) ===="; \
+	# git -C "$$ds" annex sync --content --all
+	git -C "$$ds" annex sync --all
+
+# pull from origin
+pull:
+	@ds="$(shell git -C . rev-parse --show-toplevel)"; \
+	echo "Dataset: $$ds"; \
+	echo "==== git pull from origin ===="; \
+	git -C "$$ds" pull; \
+	# echo "==== git pull tags from origin ===="; \
+	# git -C "$$ds" fetch origin --tags; \
+	# echo "==== git annex sync content from remotes ===="; \
+	# git -C "$$ds" annex sync --content
+
 
 # Clean generated files (metadata, CF reports, catalogs)
 clean:
