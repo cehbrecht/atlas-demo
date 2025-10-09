@@ -26,6 +26,7 @@ help:
 	@echo "  make info       - Show DataLad info"
 	@echo "  make save       - Save all changes to DataLad"
 	@echo "  make push       - Push to all remotes"
+	@echo "  make pull       - Pull from origin"
 	@echo "  make clean      - Remove generated metadata, CF reports, catalogs"
 
 # Initialize real data from URLs (download)
@@ -100,6 +101,18 @@ push:
 	echo "==== git annex sync (including remotes) ===="; \
 	# git -C "$$ds" annex sync --content --all
 	git -C "$$ds" annex sync --all
+
+# pull from origin
+pull:
+	@ds="$(shell git -C . rev-parse --show-toplevel)"; \
+	echo "Dataset: $$ds"; \
+	echo "==== git pull from origin ===="; \
+	git -C "$$ds" pull; \
+	# echo "==== git pull tags from origin ===="; \
+	# git -C "$$ds" fetch origin --tags; \
+	# echo "==== git annex sync content from remotes ===="; \
+	# git -C "$$ds" annex sync --content
+
 
 # Clean generated files (metadata, CF reports, catalogs)
 clean:
