@@ -228,7 +228,7 @@ Each STAC Item in the catalog now includes:
 
 You can browse the catalog directly in a STAC Browser:
 
-👉 **[Open in STAC Browser](https://radiantearth.github.io/stac-browser/#/external/https://raw.githubusercontent.com/cehbrecht/atlas-demo/main/catalogs/stac/stac_catalog.json)**
+👉 **[Open in STAC Browser](https://radiantearth.github.io/stac-browser/#/external/https://raw.githubusercontent.com/cehbrecht/atlas-demo/main/catalogs/stac/catalog.json)**
 
 To download a file via HTTP:
 
